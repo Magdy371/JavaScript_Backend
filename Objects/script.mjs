@@ -1,4 +1,4 @@
-import backPack from "./classes/backPack";
+import backPack from "./classes/backPack.mjs";
 const myPack = new backPack (
     "Nike",
     "Medium",

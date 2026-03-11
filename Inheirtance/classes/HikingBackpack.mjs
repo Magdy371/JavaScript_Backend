@@ -1,4 +1,4 @@
-import backPack from "./backPack.js";
+import backPack from "./backPack.mjs";
 export class HikingBackpack extends backPack {
   constructor(
     marks,
