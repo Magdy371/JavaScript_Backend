@@ -33,3 +33,6 @@ console.log(collections.find((item) => item === "Marcelia"));
 
 //filter() method creates a new array with all elements that pass the test implemented by the provided function.
 console.log(collections.filter((item) => typeof item === "string"));
+
+//sort() method sorts the elements of an array in place and returns the sorted array.
+console.log(collections.sort());
