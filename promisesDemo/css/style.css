@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #60a5fa;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #1e2937;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    padding: 12px 20px;
+    margin: 8px 5px;
+    border: none;
+    border-radius: 8px;
+    background: #3b82f6;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+button.success {
+    background: #22c55e;
+}
+button.danger {
+    background: #ef4444;
+}
+
+.output {
+    background: #0f172a;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 120px;
+    margin-top: 15px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    overflow-x: auto;
+}
+
+.status {
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.pending {
+    background: #eab308;
+    color: black;
+}
+.fulfilled {
+    background: #22c55e;
+    color: white;
+}
+.rejected {
+    background: #ef4444;
+    color: white;
+}
+
+.example {
+    border-left: 5px solid #60a5fa;
+}
+
+ul {
+    padding-left: 20px;
+}

@@ -1,0 +1,26 @@
+<!-- This file will be loaded via JavaScript -->
+<div class="card example">
+    <h2>1. Successful API Call (Fulfilled)</h2>
+    <button onclick="fetchUser()">Fetch random Users</button>
+    <div id="output1" class="output"></div>
+</div>
+
+<div class="card example">
+    <h2>2. Failed API Call (Rejected)</h2>
+    <button onclick="fetchInvalidUrl()" class="danger">
+        Try Invalid URL (will fail)
+    </button>
+    <div id="output2" class="output"></div>
+</div>
+
+<div class="card example">
+    <h2>3. Promise Chaining</h2>
+    <button onclick="chainPromises()">Chain: Fetch → Process Data</button>
+    <div id="output3" class="output"></div>
+</div>
+
+<div class="card example">
+    <h2>4. POST Request with Promises</h2>
+    <button onclick="createPost()">Create New Post (POST)</button>
+    <div id="output4" class="output"></div>
+</div>

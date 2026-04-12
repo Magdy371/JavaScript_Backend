@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JavaScript Promises</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>🔄 Understanding JavaScript Promises</h1>
+            <!-- Header Explanation -->
+            <div class="card">
+                <h2>What is a Promise?</h2>
+                <p>
+                    A Promise is an object representing the eventual completion
+                    (or failure) of an asynchronous operation.
+                </p>
+                <p>
+                    It has 3 states: <strong>Pending</strong>,
+                    <strong>Fulfilled</strong>, and <strong>Rejected</strong>.
+                </p>
+            </div>
+            <!-- Load components from view folder -->
+            <div id="examples"></div>
+            <div class="card">
+                <h2>Key Takeaways, Promise consuming</h2>
+                <ul>
+                    <li><code>.then()</code> handles successful cases</li>
+                    <li><code>.catch()</code> handles errors</li>
+                    <li><code>.finally()</code> always runs</li>
+                    <li>Async/Await is syntactic sugar over Promises</li>
+                </ul>
+            </div>
+        </div>
+        <script src="js/app.js"></script>
+    </body>
+</html>
