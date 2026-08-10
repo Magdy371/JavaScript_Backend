@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@casl/ability": "^7.0.1"
+  }
+}
