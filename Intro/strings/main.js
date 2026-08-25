@@ -73,3 +73,35 @@ let positionOfSubstring = sentence.indexOf("awesome!");
 let position = sentence.indexOf("fantastic");
 console.log(`The postition of provided subString "awesome!" is: ${positionOfSubstring}`);
 console.log(`there is a subString called "fantastic? :" ${position === -1? false : true}`);
+
+//ASCII
+/**
+ * short for American Standard Code for Information Interchange,
+ *  is a character encoding standard used in computers to represent text. 
+ * It assigns a numeric value to each character, which is universally recognized by machines.
+*/
+const myName = "Magdy Mohammed !";
+const lastCharacterIndex = myName.length -1;
+console.log(`ASCII code of character a is ${myName.charCodeAt(1)}`);
+console.log(`ASCII code of character ! is ${myName.charCodeAt(lastCharacterIndex)}`);
+
+/**
+ * fromCharCode() method allows you to do the opposite: convert a UTF-16 code unit 
+ * (which matches ASCII for basic characters) into its corresponding character.
+*/
+const letterRetrived = String.fromCharCode(98);
+console.log(letterRetrived);
+
+//include method is case sensetive
+let phrase = "JavaScript is awesome!";
+let result = phrase.includes("awesome");
+let result2 = phrase.includes("Awesome");
+console.log(`the phrase contains awesome keyword: ${result}`);
+console.log(`the phrase contains Awesome keyword: ${result2}`);
+
+//se the includes() method to check for a substring 
+// starting at a specific index in the string by providing a second parameter:
+let text = "Hello, JavaScript world!";
+let result3 = text.includes("JavaScript", 7);
+
+console.log(result3);
