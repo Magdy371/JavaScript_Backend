@@ -105,3 +105,22 @@ let text = "Hello, JavaScript world!";
 let result3 = text.includes("JavaScript", 7);
 
 console.log(result3);
+
+//Slice method slice(startIndex, endIndex) || slice(startIndex) will be sliced to the last index
+let originalPhrase = "Hello, world!";
+let sliced = originalPhrase.slice(0,6);
+console.log(`Sliced word is: ${sliced}`);
+let sliced2 = originalPhrase.slice(6);
+console.log(`Sliced word is: ${sliced2}`);
+/**
+ * You can also use negative numbers as indexes.
+ *  When you use a negative number, it counts backward from the end of the string:
+*/
+let message1 = "JavaScript is fun!";
+let lastWord = message1.slice(-4);
+console.log(lastWord);  // fun!
+
+let sentence2 = "Learning JavaScript is fun!";
+let extracted = sentence2.slice(9, -5);
+
+console.log(extracted);
