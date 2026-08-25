@@ -68,11 +68,11 @@ console.log(greeting); // "Hello, Ada!"
  * To locate the position of a substring inside of a string, you can use the indexOf() method.
  *  The indexOf() method in JavaScript allows you to search for a substring within a string.
 */
-let sentence =  "JavaScript is awesome!";
+let sentence = "JavaScript is awesome!";
 let positionOfSubstring = sentence.indexOf("awesome!");
 let position = sentence.indexOf("fantastic");
 console.log(`The postition of provided subString "awesome!" is: ${positionOfSubstring}`);
-console.log(`there is a subString called "fantastic? :" ${position === -1? false : true}`);
+console.log(`there is a subString called "fantastic? :" ${position === -1 ? false : true}`);
 
 //ASCII
 /**
@@ -81,7 +81,7 @@ console.log(`there is a subString called "fantastic? :" ${position === -1? false
  * It assigns a numeric value to each character, which is universally recognized by machines.
 */
 const myName = "Magdy Mohammed !";
-const lastCharacterIndex = myName.length -1;
+const lastCharacterIndex = myName.length - 1;
 console.log(`ASCII code of character a is ${myName.charCodeAt(1)}`);
 console.log(`ASCII code of character ! is ${myName.charCodeAt(lastCharacterIndex)}`);
 
@@ -89,38 +89,106 @@ console.log(`ASCII code of character ! is ${myName.charCodeAt(lastCharacterIndex
  * fromCharCode() method allows you to do the opposite: convert a UTF-16 code unit 
  * (which matches ASCII for basic characters) into its corresponding character.
 */
-const letterRetrived = String.fromCharCode(98);
-console.log(letterRetrived);
+{
+	const letterRetrived = String.fromCharCode(98);
+	console.log(letterRetrived);
 
-//include method is case sensetive
-let phrase = "JavaScript is awesome!";
-let result = phrase.includes("awesome");
-let result2 = phrase.includes("Awesome");
-console.log(`the phrase contains awesome keyword: ${result}`);
-console.log(`the phrase contains Awesome keyword: ${result2}`);
+	//include method is case sensetive
+	let phrase = "JavaScript is awesome!";
+	let result = phrase.includes("awesome");
+	let result2 = phrase.includes("Awesome");
+	console.log(`the phrase contains awesome keyword: ${result}`);
+	console.log(`the phrase contains Awesome keyword: ${result2}`);
 
-//se the includes() method to check for a substring 
-// starting at a specific index in the string by providing a second parameter:
-let text = "Hello, JavaScript world!";
-let result3 = text.includes("JavaScript", 7);
+	//se the includes() method to check for a substring 
+	// starting at a specific index in the string by providing a second parameter:
+	let text = "Hello, JavaScript world!";
+	let result3 = text.includes("JavaScript", 7);
 
-console.log(result3);
+	console.log(result3);
+}
 
 //Slice method slice(startIndex, endIndex) || slice(startIndex) will be sliced to the last index
-let originalPhrase = "Hello, world!";
-let sliced = originalPhrase.slice(0,6);
-console.log(`Sliced word is: ${sliced}`);
-let sliced2 = originalPhrase.slice(6);
-console.log(`Sliced word is: ${sliced2}`);
+{
+	let originalPhrase = "Hello, world!";
+	let sliced = originalPhrase.slice(0, 6);
+	console.log(`Sliced word is: ${sliced}`);
+	let sliced2 = originalPhrase.slice(6);
+	console.log(`Sliced word is: ${sliced2}`);
+	/**
+	 * You can also use negative numbers as indexes.
+	 *  When you use a negative number, it counts backward from the end of the string:
+	*/
+	let message1 = "JavaScript is fun!";
+	let lastWord = message1.slice(-4);
+	console.log(lastWord);  // fun!
+
+	let sentence2 = "Learning JavaScript is fun!";
+	let extracted = sentence2.slice(9, -5);
+
+	console.log(extracted);
+}
+
+// String Case Format
+{
+	let greeting = "Hello, World !";
+	let upperCaseGreeting = greeting.toUpperCase();
+	let lowerCaseGreeting = greeting.toLowerCase();
+	console.log(`Upper Case Greeitng: ${upperCaseGreeting}\nLower case greeting: ${lowerCaseGreeting}`
+	);
+}
+
 /**
- * You can also use negative numbers as indexes.
- *  When you use a negative number, it counts backward from the end of the string:
+ *  we'll explore how you can trim whitespace using JavaScript's trim(), trimStart(), and trimEnd() methods.
 */
-let message1 = "JavaScript is fun!";
-let lastWord = message1.slice(-4);
-console.log(lastWord);  // fun!
+{
+	let greeting = "   Hello, world!   ";
+	//The trim() method is the most commonly used way to remove whitespace from both the beginning and the end of a string. 
+	console.log(greeting.trim());
+	console.log(greeting.trimEnd());
+	console.log(greeting.trimStart());
+}
+/**
+ * The replace() method in JavaScript allows you to find a specified value
+ * (like a word or character) in a string and replace it with another value. 
+ * string.replace(searchValue, newValue);
+ * search value is string or regex->[regular expression]
+ * By default, the replace() method will only replace the first occurrence of the searchValue.
+ *  If the value appears multiple times in the string, only the first one will be replaced:
+*/
+{
+	let text = 'I love JavaScript';
+	let newText = text.replace("JavaScript", "Go Lang");
+	console.log(newText);
 
-let sentence2 = "Learning JavaScript is fun!";
-let extracted = sentence2.slice(9, -5);
+	let phrase = "Hello, world! Welcome to the world of coding.";
+	console.log(phrase);  // "Hello, world! Welcome to the world of coding."
+	let updatedPhrase = phrase.replace("world", "universe");
+	console.log(updatedPhrase);  // "Hello, universe! Welcome to the world of coding."
+	//We can user replaceAll method
+	updatedPhrase = phrase.replaceAll("world", "universe");
+	onsole.log(updatedPhrase);  // "Hello, universe! Welcome to the universe of coding."
+}
 
-console.log(extracted);
+//reapeat method
+//1- it will throw rangee Error if count provided is negative
+/**
+ * The count must be a finite number.
+ *  If you try to repeat a string an infinite number of times or use Infinity as the count,
+ *  you will also get a RangeError.
+ * In JavaScript, Infinity is a special value that represents an infinite quantity. 
+ * It's used to denote numbers that are larger than any finite number.
+*/
+{
+	let word = ' Hello '
+	let repeatedWord = word.repeat(9);
+	console.log(repeatedWord);
+	word = "Test";
+	//console.log(word.repeat(Infinity));  // Throws RangeError: Invalid count value
+	//If the count is not an integer (such as a decimal like 2.5), 
+	// the repeat() method will round it down to the nearest integer.
+	console.log(word.repeat(2.5));  // "TestTest"
+	//If count is zero it will return empty string
+	console.log(word.repeat(0)); // will return empty string
+	console.log("Hello".repeat(3));
+}
