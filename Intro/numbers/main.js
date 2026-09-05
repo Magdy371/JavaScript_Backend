@@ -109,3 +109,25 @@
     console.log(--counter); // 5
     console.log(counter); // 5
 }
+
+// Number theory and special numeric values
+{
+    /**
+     * parseFloat() and parseInt() are two essential methods in JavaScript for converting strings to numbers. 
+     * These methods are particularly useful when dealing with user input or processing data
+     *  that comes in string format but needs to be treated as numerical values.
+    */
+    console.log(parseFloat("3.14"));     // 3.14
+    console.log(parseFloat("3.14 abc")); // 3.14
+    console.log(parseFloat("3.14.5"));   // 3.14
+    console.log(parseFloat("abc 3.14")); // NaN
+
+    console.log(parseInt("42"));       // 42
+    console.log(parseInt("42px"));     // 42
+    console.log(parseInt("3.14"));     // 3
+    console.log(parseInt("abc123"));   // NaN
+
+    //They handle plus and minus signs at the beginning of the string:
+    console.log(parseFloat("+3.14"));  // 3.14
+    console.log(parseInt("-42"));      // -42
+}
